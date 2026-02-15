@@ -163,8 +163,11 @@
       </div>
     </div>
     <div class="footer-copyright">
-      <p>&copy; 2025 Dryves. All rights reserved.</p>
+      <p>&copy; <span id="copyright-year"></span> Dryves. All rights reserved.</p>
     </div>
   </footer>
+  <script>
+    document.getElementById('copyright-year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>

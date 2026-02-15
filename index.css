@@ -65,19 +65,15 @@ body {
 
 /* Touch-friendly targets */
 a,
-button,
-.cta-button {
+button {
   min-height: 44px;
-  min-width: 44px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
 }
 
 /* Prevent text selection on touch */
-.navbar,
-.feature-icon,
-.cta-button {
+.navbar {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -134,7 +130,7 @@ button,
 /* Hero Section */
 .hero {
   text-align: center;
-  padding: 6rem var(--spacing-md);
+  padding: 4rem var(--spacing-md) 3rem;
   max-width: 900px;
   margin: 0 auto;
 }
@@ -164,39 +160,32 @@ button,
   color: var(--color-text-secondary);
 }
 
-/* CTA Button */
-.cta-button {
+/* App Store Badge */
+.app-store-link {
   display: inline-block;
-  background: rgba(255, 255, 255, 0.95);
-  color: var(--color-primary);
-  padding: var(--spacing-sm) 2.5rem;
-  border-radius: var(--radius-md);
   text-decoration: none;
-  font-weight: 700;
-  font-size: 1.1em;
-  transition: all var(--transition-base);
-  box-shadow: var(--shadow-md);
-  cursor: pointer;
+  transition: opacity var(--transition-base);
 }
 
-.cta-button:hover {
-  background: var(--color-white);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-lg);
+.app-store-link img {
+  height: 50px;
+  width: auto;
+  display: block;
 }
 
-.cta-button:focus {
+.app-store-link:hover {
+  opacity: 0.9;
+}
+
+.app-store-link:focus {
   outline: 2px solid var(--color-white);
-  outline-offset: 2px;
-}
-
-.cta-button:active {
-  transform: translateY(0);
+  outline-offset: 4px;
+  border-radius: 8px;
 }
 
 /* Features Section */
 .features {
-  padding: var(--spacing-xl) var(--spacing-md);
+  padding: 3rem var(--spacing-md);
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -220,7 +209,7 @@ button,
   -webkit-backdrop-filter: var(--glass-blur);
   border: 1px solid var(--glass-border);
   border-radius: var(--radius-lg);
-  padding: var(--spacing-md);
+  padding: 1.5rem;
   transition: all var(--transition-base);
 }
 
@@ -230,13 +219,8 @@ button,
   box-shadow: var(--shadow-lg);
 }
 
-.feature-icon {
-  font-size: 3em;
-  margin-bottom: var(--spacing-sm);
-}
-
 .feature-card h3 {
-  font-size: 1.4em;
+  font-size: 1.3em;
   font-weight: 600;
   margin-bottom: 0.8rem;
 }
@@ -248,7 +232,7 @@ button,
 
 /* Comparison Section */
 .comparison {
-  padding: var(--spacing-xl) var(--spacing-md);
+  padding: 3rem var(--spacing-md);
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -301,7 +285,7 @@ button,
 /* CTA Section */
 .cta {
   text-align: center;
-  padding: 5rem var(--spacing-md);
+  padding: 3rem var(--spacing-md);
   max-width: 800px;
   margin: 0 auto;
 }
@@ -506,13 +490,13 @@ footer {
   }
 
   .hero {
-    padding: var(--spacing-lg) 1.5rem;
+    padding: 2rem 1.5rem;
   }
 
   .features,
   .comparison,
   .cta {
-    padding: var(--spacing-lg) 1.5rem;
+    padding: 2rem 1.5rem;
   }
 
   .features-grid {
@@ -551,16 +535,13 @@ footer {
 }
 
 @media (max-width: 480px) {
-  .cta-button {
-    padding: 0.9rem 2rem;
-    font-size: 1em;
-    width: 100%;
-    max-width: 320px;
+  .app-store-link img {
+    height: 45px;
   }
 
   .feature-card,
   .comparison-item {
-    padding: 1.5rem;
+    padding: 1.25rem;
   }
 
   .content {
@@ -568,13 +549,13 @@ footer {
   }
   
   .hero {
-    padding: 2.5rem 1rem;
+    padding: 2rem 1rem;
   }
   
   .features,
   .comparison,
   .cta {
-    padding: 2.5rem 1rem;
+    padding: 2rem 1rem;
   }
   
   .navbar a {
@@ -582,17 +563,12 @@ footer {
     font-size: 0.9em;
   }
   
-  /* Optimize feature icons for mobile */
-  .feature-icon {
-    font-size: 2.5em;
-  }
-  
   .feature-card h3 {
-    font-size: 1.25em;
+    font-size: 1.2em;
   }
   
   .comparison-item h3 {
-    font-size: 1.35em;
+    font-size: 1.3em;
   }
   
   .comparison-item.highlight h3 {

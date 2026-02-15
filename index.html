@@ -104,7 +104,9 @@
     <section class="hero" aria-labelledby="hero-heading">
       <h1 id="hero-heading">The Modern Way to Track Your Driving Hours</h1>
       <p class="subtitle">Built for student drivers with Siri voice control, Live Activities, CarPlay, and intelligent automation.</p>
-      <a href="https://apps.apple.com/app/dryves" class="cta-button" aria-label="Download Dryves on the App Store">Download on the App Store</a>
+      <a href="https://apps.apple.com/us/app/dryves/id6759067319?itscg=30200&amp;itsct=apps_box_badge&amp;mttnsubad=6759067319" class="app-store-link" aria-label="Download Dryves on the App Store">
+        <img src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/en-us?releaseDate=1770854400" alt="Download on the App Store">
+      </a>
       <p class="tagline">Focus on learning the road—let Dryves handle the rest.</p>
     </section>
 
@@ -112,42 +114,34 @@
       <h2 id="features-heading">Everything You Need to Master the Road</h2>
       <div class="features-grid" role="list">
         <div class="feature-card" role="listitem">
-          <div class="feature-icon" role="img" aria-label="Speaking icon">🗣️</div>
           <h3>Siri Voice Control</h3>
           <p>Start, stop, and manage drives hands-free with Siri commands while keeping your eyes on the road.</p>
         </div>
         <div class="feature-card" role="listitem">
-          <div class="feature-icon" role="img" aria-label="Mobile phone icon">📱</div>
           <h3>Live Activities</h3>
           <p>See your driving time in real-time on your Lock Screen and Dynamic Island while you drive.</p>
         </div>
         <div class="feature-card" role="listitem">
-          <div class="feature-icon" role="img" aria-label="Car icon">🚗</div>
           <h3>CarPlay Support</h3>
           <p>Control your drives directly from your car's dashboard with full CarPlay integration.</p>
         </div>
         <div class="feature-card" role="listitem">
-          <div class="feature-icon" role="img" aria-label="Chart icon">📊</div>
           <h3>Widgets Everywhere</h3>
           <p>Track progress at a glance with Home Screen, Lock Screen, and StandBy widgets.</p>
         </div>
         <div class="feature-card" role="listitem">
-          <div class="feature-icon" role="img" aria-label="Bell icon">🔔</div>
           <h3>Smart Reminders</h3>
           <p>Get intelligent location-based reminders to start or stop your drives automatically.</p>
         </div>
         <div class="feature-card" role="listitem">
-          <div class="feature-icon" role="img" aria-label="Weather icon">🌤️</div>
           <h3>Auto Weather Detection</h3>
           <p>Automatically logs weather conditions and time of day for every drive.</p>
         </div>
         <div class="feature-card" role="listitem">
-          <div class="feature-icon" role="img" aria-label="Progress chart icon">📈</div>
           <h3>Progress Tracking</h3>
           <p>Visualize your journey to your license with detailed statistics and milestones.</p>
         </div>
         <div class="feature-card" role="listitem">
-          <div class="feature-icon" role="img" aria-label="Import icon">📥</div>
           <h3>Import Drives</h3>
           <p>Seamlessly import your existing driving hours from other logging apps.</p>
         </div>
@@ -159,25 +153,25 @@
       <div class="comparison-grid">
         <div class="comparison-item">
           <h3>Paper Logs</h3>
-          <p>❌ Manual entry required</p>
-          <p>❌ Easy to lose or damage</p>
-          <p>❌ No automatic tracking</p>
-          <p>❌ Time-consuming to maintain</p>
+          <p>Manual entry required</p>
+          <p>Easy to lose or damage</p>
+          <p>No automatic tracking</p>
+          <p>Time-consuming to maintain</p>
         </div>
         <div class="comparison-item highlight">
           <h3>Dryves Is Different</h3>
-          <p>✅ Voice control with Siri</p>
-          <p>✅ Live Activities & CarPlay</p>
-          <p>✅ Auto weather detection</p>
-          <p>✅ Smart location reminders</p>
-          <p>✅ Cloud backup & sync</p>
+          <p>Voice control with Siri</p>
+          <p>Live Activities & CarPlay</p>
+          <p>Auto weather detection</p>
+          <p>Smart location reminders</p>
+          <p>Cloud backup & sync</p>
         </div>
         <div class="comparison-item">
           <h3>Other Apps</h3>
-          <p>❌ Basic tracking only</p>
-          <p>❌ No voice control</p>
-          <p>❌ Limited automation</p>
-          <p>❌ Missing iOS features</p>
+          <p>Basic tracking only</p>
+          <p>No voice control</p>
+          <p>Limited automation</p>
+          <p>Missing iOS features</p>
         </div>
       </div>
     </section>
@@ -185,7 +179,9 @@
     <section class="cta" aria-labelledby="cta-heading">
       <h2 id="cta-heading">Ready to Transform Your Drive Tracking?</h2>
       <p>Join student drivers who are mastering the road with Dryves.</p>
-      <a href="https://apps.apple.com/app/dryves" class="cta-button" aria-label="Download Dryves on the App Store">Get Started Today</a>
+      <a href="https://apps.apple.com/us/app/dryves/id6759067319?itscg=30200&amp;itsct=apps_box_badge&amp;mttnsubad=6759067319" class="app-store-link" aria-label="Download Dryves on the App Store">
+        <img src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/en-us?releaseDate=1770854400" alt="Download on the App Store">
+      </a>
     </section>
   </main>
 
@@ -212,8 +208,11 @@
       </div>
     </div>
     <div class="footer-copyright">
-      <p>&copy; 2025 Dryves. All rights reserved.</p>
+      <p>&copy; <span id="copyright-year"></span> Dryves. All rights reserved.</p>
     </div>
   </footer>
+  <script>
+    document.getElementById('copyright-year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
