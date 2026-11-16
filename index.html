@@ -55,11 +55,6 @@
     <section class="hero">
       <div class="wrap">
         <div>
-          <p class="island">
-            <img src="assets/icon-96.png" alt="" width="26" height="26">
-            Tracking every second
-            <time id="timer" aria-hidden="true">0:00</time>
-          </p>
           <h1>Never forget to <em>log a drive.</em></h1>
           <p class="lede">Dryves is the driving-hours log for student drivers. Start a drive with Siri, CarPlay, or a widget. Weather, day or night, and the reminders to start and stop are handled for you.</p>
           <div class="cta">
@@ -76,10 +71,17 @@
           </ul>
         </div>
 
+        <div class="fan-col">
+          <p class="island">
+            <img src="assets/icon-96.png" alt="" width="26" height="26">
+            Tracking every second
+            <time id="timer" aria-hidden="true">0:00</time>
+          </p>
         <div class="fan">
           <img src="assets/screenshots/new-drive-400.webp" srcset="assets/screenshots/new-drive-400.webp 400w, assets/screenshots/new-drive.webp 800w" sizes="(max-width: 860px) 42vw, 22vw" width="800" height="1734" alt="Dryves New Drive screen with a running drive timer and an End Drive button.">
           <img src="assets/screenshots/dashboard-400.webp" srcset="assets/screenshots/dashboard-400.webp 400w, assets/screenshots/dashboard.webp 800w" sizes="(max-width: 860px) 48vw, 25vw" width="800" height="1734" alt="Dryves Dashboard showing a progress ring with total and night hours measured against goals.">
           <img src="assets/screenshots/live-activities-400.webp" srcset="assets/screenshots/live-activities-400.webp 400w, assets/screenshots/live-activities.webp 800w" sizes="(max-width: 860px) 42vw, 22vw" width="800" height="1734" alt="A Dryves drive timer shown in the Dynamic Island and on the Lock Screen.">
+        </div>
         </div>
       </div>
     </section>
@@ -87,7 +89,6 @@
     <section class="app" id="app">
       <div class="wrap">
         <div class="section-head">
-          <p class="kicker">The app</p>
           <h2>Logging hours shouldn't be the hard part of learning to drive.</h2>
           <p>Dryves is built on the parts of iOS you already use, so starting a drive takes one tap or one sentence, and the details fill themselves in.</p>
         </div>
@@ -148,14 +149,15 @@
     <section id="who">
       <div class="wrap">
         <div class="section-head">
-          <p class="kicker">Who it's for</p>
           <h2>One record of a new driver, useful to everyone who depends on it.</h2>
         </div>
 
         <div class="audiences">
           <article class="aud now">
-            <p class="tag">Available now</p>
-            <h3>Teen drivers</h3>
+            <div class="aud-head">
+              <h3>Teen drivers</h3>
+              <p class="tag">Available now</p>
+            </div>
             <p>Get every supervised hour counted toward your permit or license, without a paper log to fill in afterwards.</p>
             <ul>
               <li>Start and stop by voice, widget, or CarPlay</li>
@@ -166,8 +168,10 @@
           </article>
 
           <article class="aud">
-            <p class="tag">Available now</p>
-            <h3>Parents</h3>
+            <div class="aud-head">
+              <h3>Parents</h3>
+              <p class="tag">Available now</p>
+            </div>
             <p>You're in the passenger seat for most of these hours. Dryves makes sure they count, without you keeping the log or doing the reminding.</p>
             <ul>
               <li>Reminders when your teen leaves home or school, so drives don't go unlogged</li>
@@ -178,8 +182,10 @@
           </article>
 
           <article class="aud">
-            <p class="tag">Partnerships open</p>
-            <h3>Driving schools</h3>
+            <div class="aud-head">
+              <h3>Driving schools</h3>
+              <p class="tag">Partnerships open</p>
+            </div>
             <p>Partner with Dryves to monitor and track your students' driving practice, so you know what has happened between lessons before the next one starts.</p>
             <ul>
               <li>Follow each student's practice as it builds up</li>
@@ -190,8 +196,10 @@
           </article>
 
           <article class="aud later">
-            <p class="tag">On the roadmap</p>
-            <h3>Insurers</h3>
+            <div class="aud-head">
+              <h3>Insurers</h3>
+              <p class="tag">On the roadmap</p>
+            </div>
             <p>We don't have a product for insurers yet. If a clearer picture of new drivers would matter to your work, we'd like to hear what you need.</p>
             <ul>
               <li>New drivers are the hardest to assess, with the least to go on</li>
@@ -206,13 +214,12 @@
     <section class="night" id="next">
       <div class="wrap">
         <div class="section-head">
-          <p class="kicker">What's next</p>
           <h2>Something new is in the garage.</h2>
           <p>We're building the next part of Dryves. It's still up on the lift, and the cover stays on until it's ready to roll out.</p>
         </div>
         <div class="cta-row">
           <a class="btn" href="mailto:hello@dryves.app?subject=Tell%20me%20what%27s%20next%20for%20Dryves">Get a heads-up</a>
-          <span>No details yet. We'll say more when it's ready.</span>
+          <span>Opens an email to hello@dryves.app. We'll write back when there's news.</span>
         </div>
       </div>
       <div class="lane" aria-hidden="true"></div>
