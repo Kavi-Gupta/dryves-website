@@ -1,25 +1,73 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support — Dryves</title>
+  <meta name="description" content="Get help with Dryves, the smart driving-hours logger for iPhone.">
+  <meta name="theme-color" content="#fbf6f2">
+  <link rel="canonical" href="https://dryves.app/support.html">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <link rel="stylesheet" href="index.css">
-  <title>Smart Drive Log - Support</title>
 </head>
 <body>
-  <nav class="navbar">
-    <a href="/index.html">Home</a>
-    <a href="/privacy.html">Privacy Policy</a>
-    <a href="/support.html" class="active">Support</a>
-  </nav>
-  <main class="content">
-    <h1>Support</h1>
-    <p>If you need assistance, please contact our support team.</p>
-    <p>Email: <a href="mailto:smartdrivetracker@gmail.com">smartdrivetracker@gmail.com</a></p>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="/">
+        <img src="assets/icon-96.png" alt="" width="34" height="34">Dryves
+      </a>
+      <nav class="site-nav" aria-label="Main">
+        <a href="/#app">The app</a>
+        <a href="/#who">Who it's for</a>
+        <a href="/#technology">Technology</a>
+        <a href="/support.html" aria-current="page">Support</a>
+        <a class="btn small" href="https://apps.apple.com/us/app/dryves-smart-driving-logger/id6759067319">Get the app</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="page">
+    <div class="wrap">
+      <h1>Support</h1>
+      <p>Stuck on something, found a bug, or have an idea for Dryves? Email us and we'll help.</p>
+
+      <div class="contact-card">
+        <a href="mailto:smartdrivetracker@gmail.com">smartdrivetracker@gmail.com</a>
+      </div>
+
+      <h2>Common questions</h2>
+      <dl class="faq">
+        <dt>Which devices does Dryves run on?</dt>
+        <dd>iPhone with iOS 17.0 or later. The drive timer in the Dynamic Island needs an iPhone 14 Pro or later; on other iPhones it appears on the Lock Screen.</dd>
+
+        <dt>Can I bring over drives from another app?</dt>
+        <dd>Yes. Dryves imports driving hours from RoadReady, and from CSV or PDF logs.</dd>
+
+        <dt>How do I start a drive with Siri?</dt>
+        <dd>Say “Hey Siri, start drive in Dryves.” You can end a drive or log a past one by voice too.</dd>
+
+        <dt>Where is my driving data stored?</dt>
+        <dd>On your iPhone. Dryves doesn't require an account. See the <a href="/privacy.html">privacy policy</a> for details.</dd>
+
+        <dt>I run a driving school or work in insurance. Who do I talk to?</dt>
+        <dd>The same address. Tell us a little about what you need and we'll get back to you.</dd>
+      </dl>
+    </div>
   </main>
-  <footer>
-    <p>&copy; 2025 Smart Drive Log. All rights reserved.</p>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>&copy; <span id="year">2026</span> Dryves</span>
+      <nav aria-label="Footer">
+        <a href="/privacy.html">Privacy Policy</a>
+        <a href="/support.html">Support</a>
+        <a href="mailto:smartdrivetracker@gmail.com">Contact</a>
+      </nav>
+    </div>
   </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
