@@ -192,7 +192,7 @@ section { padding-block: clamp(64px, 9vw, 120px); }
 .features p { margin-top: 8px; color: var(--ink-2); font-size: 1rem; }
 
 /* Audiences */
-.audiences { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.audiences { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
 .aud {
   display: flex; flex-direction: column; background: #fff; border: 1px solid var(--rule);
   border-radius: var(--radius); padding: clamp(24px, 3vw, 34px);
@@ -217,7 +217,9 @@ section { padding-block: clamp(64px, 9vw, 120px); }
 .aud .more { margin-top: auto; font-weight: 650; }
 .aud.now .more { color: #fff; }
 
-@media (max-width: 900px) { .audiences { grid-template-columns: 1fr; } }
+.aud.later { background: transparent; border-style: dashed; border-color: #cdbdb4; }
+
+@media (max-width: 760px) { .audiences { grid-template-columns: 1fr; } }
 
 /* Technology — the night section */
 .night { background: var(--night); color: var(--night-ink); position: relative; overflow: hidden; }
@@ -234,7 +236,8 @@ section { padding-block: clamp(64px, 9vw, 120px); }
   border: 1px solid var(--night-rule); border-radius: 999px; padding: 6px 14px;
   font-size: 0.8125rem; font-weight: 650; letter-spacing: 0.06em; text-transform: uppercase; color: var(--night-ink-2);
 }
-.status::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--peach); }
+.status::before { content: ""; flex: none; width: 8px; height: 8px; border-radius: 50%; background: var(--peach); }
+@media (max-width: 480px) { .status { border-radius: 16px; font-size: 0.75rem; } }
 
 .flow { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1.15fr); gap: clamp(18px, 3vw, 36px); align-items: stretch; }
 .flow-col { display: grid; gap: 16px; align-content: start; }
