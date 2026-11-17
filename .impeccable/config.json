@@ -1,0 +1,14 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "overused-font",
+        "value": "inter",
+        "createdAt": "2026-11-17T17:45:24.831Z",
+        "reason": "agent decision: user brief asked for a plain, simple, sleek font; Inter chosen to meet it"
+      }
+    ]
+  }
+}
