@@ -17,16 +17,20 @@
   --red-deep: #c21730;   /* buttons, links: passes AA with white */
   --red-ink: #8f0e20;
   --peach: #f6b98a;      /* the "day" arc on the in-app progress ring */
-  --paper: #fbf6f2;
-  --paper-2: #f3ebe5;
-  --ink: #1d1517;
-  --ink-2: #5c4f52;
-  --rule: #e4d8d1;
-  --night: #100d14;
-  --night-2: #1b1622;
-  --night-rule: #322a3b;
-  --night-ink: #f4eef0;
-  --night-ink-2: #b3a8b6;
+  /* neutrals carry no brand hue, so they hold up through the accent change */
+  --paper: #ffffff;
+  --paper-2: #f5f5f7;
+  --ink: #18181b;
+  --ink-2: #5d5d66;
+  --ink-3: #74747c;      /* small print; 4.6:1 on white */
+  --rule: #e4e4e9;
+  --rule-strong: #c9c9d0;
+  --shadow: 17, 17, 26;  /* rgb triplet for elevation shadows */
+  --night: #0e0f13;
+  --night-2: #18191f;
+  --night-rule: #2b2c34;
+  --night-ink: #f3f3f6;
+  --night-ink-2: #a9aab3;
 
   --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
 
@@ -158,7 +162,7 @@ p { margin: 0; text-wrap: pretty; }
 .fan { display: flex; justify-content: center; align-items: center; width: 100%; }
 .fan img {
   width: 39%; flex: none; border-radius: clamp(16px, 2.4vw, 28px);
-  box-shadow: 0 30px 60px -28px rgba(143, 14, 32, 0.55), 0 2px 0 rgba(255, 255, 255, 0.25) inset;
+  box-shadow: 0 30px 60px -28px rgba(var(--shadow), 0.42), 0 2px 0 rgba(255, 255, 255, 0.25) inset;
 }
 .fan img:nth-child(1) { transform: rotate(-6deg) translateY(4%); margin-right: -11%; }
 .fan img:nth-child(2) { z-index: 1; width: 44%; }
@@ -196,7 +200,7 @@ section { padding-block: clamp(64px, 9vw, 120px); }
 .strip::-webkit-scrollbar-track { background: transparent; }
 .strip img {
   flex: none; width: min(262px, 68vw); border-radius: 24px; scroll-snap-align: center;
-  box-shadow: 0 18px 34px -22px rgba(143, 14, 32, 0.6);
+  box-shadow: 0 18px 34px -22px rgba(var(--shadow), 0.45);
 }
 
 .features {
@@ -234,7 +238,7 @@ section { padding-block: clamp(64px, 9vw, 120px); }
 .aud .more { margin-top: auto; font-weight: 600; }
 .aud.now .more { color: #fff; }
 
-.aud.later { background: transparent; border-style: dashed; border-color: #cdbdb4; }
+.aud.later { background: transparent; border-style: dashed; border-color: var(--rule-strong); }
 
 @media (max-width: 760px) { .audiences { grid-template-columns: 1fr; } }
 
@@ -269,7 +273,7 @@ section { padding-block: clamp(64px, 9vw, 120px); }
 .site-footer nav { display: flex; flex-wrap: wrap; gap: 0 22px; margin-left: auto; }
 .site-footer a { color: var(--ink-2); padding-block: 8px; }
 .site-footer a:hover { color: var(--red-deep); }
-.legal { flex-basis: 100%; font-size: 0.8125rem; color: #7a6c6f; }
+.legal { flex-basis: 100%; font-size: 0.8125rem; color: var(--ink-3); }
 
 /* ---------- Text pages (privacy, support) ---------- */
 
@@ -284,7 +288,7 @@ section { padding-block: clamp(64px, 9vw, 120px); }
 .page .effective { color: var(--ink-2); font-size: 0.95rem; margin: -12px 0 24px; }
 .page .note { margin-top: 44px; padding-top: 20px; border-top: 1px solid var(--rule); font-size: 0.875rem; color: var(--ink-2); }
 .contact-card {
-  margin-top: 28px; background: #fff; border: 1px solid var(--rule); border-radius: var(--radius);
+  margin-top: 28px; background: var(--paper-2); border: 1px solid var(--rule); border-radius: var(--radius);
   padding: clamp(22px, 3vw, 32px);
 }
 .contact-card a { font-weight: 600; letter-spacing: -0.02em; font-size: clamp(1.15rem, 3.4vw, 1.5rem); overflow-wrap: anywhere; }
