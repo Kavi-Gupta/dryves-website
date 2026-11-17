@@ -11,7 +11,7 @@
 }
 
 :root {
-  color-scheme: light;
+  color-scheme: light dark;
 
   --red: #e93749;        /* App Store screenshot red */
   --red-deep: #c21730;   /* buttons, links: passes AA with white */
@@ -32,11 +32,40 @@
   --night-ink: #f3f3f6;
   --night-ink-2: #a9aab3;
 
+  /* roles: the dark scheme below redefines these, not the components */
+  --surface: #ffffff;    /* cards */
+  --chip: var(--paper-2);
+  --link: var(--red-deep);
+  --link-hover: var(--red-ink);
+  --btn-hover: var(--red-ink);
+  --night-edge: transparent;
+
   --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
 
   --wrap: 1120px;
   --gutter: clamp(20px, 5vw, 40px);
   --radius: 22px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #0f0f12;
+    --paper-2: #16161a;
+    --ink: #f2f2f5;
+    --ink-2: #a8a8b2;
+    --ink-3: #8b8b95;      /* small print; 5.6:1 on --paper */
+    --rule: #26262c;
+    --rule-strong: #3e3e47;
+    --shadow: 0, 0, 0;
+    --night: #000000;
+    --night-edge: var(--rule);
+
+    --surface: #1a1a1f;
+    --chip: #2a2a31;
+    --link: #ff6b79;       /* red-deep is too dark to read on near-black */
+    --link-hover: #ff9ba4;
+    --btn-hover: #d8213a;
+  }
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -57,13 +86,13 @@ body {
 
 img { max-width: 100%; height: auto; display: block; }
 
-a { color: var(--red-deep); text-underline-offset: 0.18em; text-decoration-thickness: 0.07em; }
+a { color: var(--link); text-underline-offset: 0.18em; text-decoration-thickness: 0.07em; }
 ::selection { background: var(--red-deep); color: #fff; }
 .night ::selection { background: var(--peach); color: var(--night); }
 .aud.now ::selection { background: #fff; color: var(--red-ink); }
-a:hover { color: var(--red-ink); }
+a:hover { color: var(--link-hover); }
 
-:focus-visible { outline: 3px solid var(--red-deep); outline-offset: 3px; border-radius: 6px; }
+:focus-visible { outline: 3px solid var(--link); outline-offset: 3px; border-radius: 6px; }
 .night :focus-visible { outline-color: var(--peach); }
 .aud.now :focus-visible { outline-color: #fff; }
 
@@ -83,9 +112,9 @@ p { margin: 0; text-wrap: pretty; }
 
 .skip {
   position: absolute; left: 12px; top: -60px; z-index: 100;
-  background: var(--ink); color: #fff; padding: 10px 16px; border-radius: 10px;
+  background: var(--ink); color: var(--paper); padding: 10px 16px; border-radius: 10px;
 }
-.skip:focus, .skip:hover { color: #fff; }
+.skip:focus, .skip:hover { color: var(--paper); }
 .skip:focus { top: 12px; }
 
 /* ---------- Header ---------- */
@@ -119,7 +148,7 @@ p { margin: 0; text-wrap: pretty; }
   transition: background-color 0.15s, border-color 0.15s, color 0.15s;
 }
 .btn:active { transform: translateY(1px); }
-.btn:hover { background: var(--red-ink); border-color: var(--red-ink); color: #fff; }
+.btn:hover { background: var(--btn-hover); border-color: var(--btn-hover); color: #fff; }
 .btn.small { padding: 0.45em 1em; font-size: 0.95rem; }
 .site-nav a.btn, .site-nav a.btn:hover { color: #fff; }
 .btn.ghost { background: transparent; color: var(--ink); border-color: var(--ink); }
@@ -141,6 +170,7 @@ p { margin: 0; text-wrap: pretty; }
 .island {
   display: inline-flex; align-items: center; gap: 12px;
   background: #000; color: #fff; border-radius: 999px;
+  box-shadow: 0 0 0 1px var(--night-edge);
   padding: 7px 16px 7px 8px;
   font-size: 0.875rem; font-weight: 550;
 }
@@ -150,7 +180,7 @@ p { margin: 0; text-wrap: pretty; }
   min-width: 3.2ch; text-align: right;
 }
 
-.hero h1 em { font-style: normal; color: var(--red-deep); }
+.hero h1 em { font-style: normal; color: var(--link); }
 .hero .lede { margin-top: 24px; font-size: clamp(1.125rem, 1.6vw, 1.3rem); color: var(--ink-2); max-width: 34em; }
 .hero .cta { margin-top: 32px; display: flex; flex-wrap: wrap; align-items: center; gap: 14px 22px; }
 .badge-link { display: inline-block; border-radius: 9px; transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1); }
@@ -214,14 +244,14 @@ section { padding-block: clamp(64px, 9vw, 120px); }
 /* Audiences */
 .audiences { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
 .aud {
-  display: flex; flex-direction: column; background: #fff; border: 1px solid var(--rule);
+  display: flex; flex-direction: column; background: var(--surface); border: 1px solid var(--rule);
   border-radius: var(--radius); padding: clamp(24px, 3vw, 34px);
 }
 .aud.now { background: var(--red-deep); border-color: var(--red-deep); color: #fff; }
 .aud-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 16px; }
 .tag {
   font-size: 0.8125rem; font-weight: 550; line-height: 1.4;
-  padding: 3px 10px; border-radius: 999px; background: var(--paper-2); color: var(--ink-2);
+  padding: 3px 10px; border-radius: 999px; background: var(--chip); color: var(--ink-2);
 }
 .aud.now .tag { background: #fff; color: var(--red-ink); }
 .aud h3 { font-size: 1.5rem; letter-spacing: -0.025em; }
@@ -232,7 +262,7 @@ section { padding-block: clamp(64px, 9vw, 120px); }
 .aud.now li { border-color: rgba(255, 255, 255, 0.28); }
 .aud li::before {
   content: ""; position: absolute; left: 2px; top: calc(10px + 0.8em - 3px); width: 6px; height: 6px; border-radius: 50%;
-  background: var(--red-deep);
+  background: var(--link);
 }
 .aud.now li::before { background: var(--peach); }
 .aud .more { margin-top: auto; font-weight: 600; }
@@ -243,7 +273,7 @@ section { padding-block: clamp(64px, 9vw, 120px); }
 @media (max-width: 760px) { .audiences { grid-template-columns: 1fr; } }
 
 /* What's next — the night section */
-.night { background: var(--night); color: var(--night-ink); position: relative; overflow: hidden; }
+.night { background: var(--night); color: var(--night-ink); position: relative; overflow: hidden; border-block: 1px solid var(--night-edge); }
 .night::before {
   /* headlights on a dark road */
   content: ""; position: absolute; inset: auto -10% -55% -10%; height: 90%;
@@ -272,7 +302,7 @@ section { padding-block: clamp(64px, 9vw, 120px); }
 .site-footer .wrap { display: flex; flex-wrap: wrap; gap: 12px 28px; align-items: center; }
 .site-footer nav { display: flex; flex-wrap: wrap; gap: 0 22px; margin-left: auto; }
 .site-footer a { color: var(--ink-2); padding-block: 8px; }
-.site-footer a:hover { color: var(--red-deep); }
+.site-footer a:hover { color: var(--link); }
 .legal { flex-basis: 100%; font-size: 0.8125rem; color: var(--ink-3); }
 
 /* ---------- Text pages (privacy, support) ---------- */
@@ -284,7 +314,7 @@ section { padding-block: clamp(64px, 9vw, 120px); }
 .page p + p, .page ul + p { margin-top: 16px; }
 .page ul { margin: 12px 0 0; padding-left: 1.25em; }
 .page li + li { margin-top: 8px; }
-.page li::marker { color: var(--red-deep); }
+.page li::marker { color: var(--link); }
 .page .effective { color: var(--ink-2); font-size: 0.95rem; margin: -12px 0 24px; }
 .page .note { margin-top: 44px; padding-top: 20px; border-top: 1px solid var(--rule); font-size: 0.875rem; color: var(--ink-2); }
 .contact-card {
