@@ -3,33 +3,173 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dryves — Never forget to log a drive</title>
-  <meta name="description" content="Dryves is the smart driving-hours logger for student drivers, with Siri, CarPlay, Live Activities, and automatic weather and day/night tracking. Built for teen drivers, their parents, and driving schools.">
+  <title>Dryves: Smart Driving Logger for Student Drivers</title>
+  <meta name="description" content="Dryves is a free driving log app for iPhone. Track supervised practice hours for your learner's permit with Siri, CarPlay, and widgets, with day and night hours and weather logged automatically.">
   <meta name="apple-itunes-app" content="app-id=6759067319">
   <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#0f0f12" media="(prefers-color-scheme: dark)">
+  <meta name="robots" content="index, follow, max-image-preview:large">
   <link rel="canonical" href="https://dryves.app/">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Dryves">
   <meta property="og:url" content="https://dryves.app/">
-  <meta property="og:title" content="Dryves — Never forget to log a drive">
-  <meta property="og:description" content="The smart driving-hours logger for student drivers. Free on the App Store.">
+  <meta property="og:title" content="Dryves: Smart Driving Logger for Student Drivers">
+  <meta property="og:description" content="The free driving log app for student drivers. Log permit practice hours with Siri, CarPlay, and widgets.">
   <meta property="og:image" content="https://dryves.app/assets/icon-512.png">
+  <meta property="og:image:alt" content="The Dryves app icon">
+  <meta property="og:locale" content="en_US">
   <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Dryves: Smart Driving Logger for Student Drivers">
+  <meta name="twitter:description" content="The free driving log app for student drivers. Log permit practice hours with Siri, CarPlay, and widgets.">
+  <meta name="twitter:image" content="https://dryves.app/assets/icon-512.png">
   <link rel="preload" href="assets/fonts/inter-latin-var.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="index.css">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "Dryves - Smart Driving Logger",
-    "operatingSystem": "iOS 17.0 or later",
-    "applicationCategory": "EducationalApplication",
-    "url": "https://dryves.app/",
-    "downloadUrl": "https://apps.apple.com/us/app/dryves-smart-driving-logger/id6759067319",
-    "image": "https://dryves.app/assets/icon-512.png",
-    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://dryves.app/#website",
+        "url": "https://dryves.app/",
+        "name": "Dryves",
+        "alternateName": ["Dryves App", "Dryves Driving Logger"],
+        "description": "The smart driving logger for student drivers.",
+        "publisher": { "@id": "https://dryves.app/#organization" },
+        "inLanguage": "en-US"
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://dryves.app/#organization",
+        "name": "Dryves",
+        "url": "https://dryves.app/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://dryves.app/assets/icon-512.png",
+          "width": 512,
+          "height": 512
+        },
+        "email": "hello@dryves.app",
+        "sameAs": ["https://apps.apple.com/us/app/dryves-smart-driving-logger/id6759067319"],
+        "contactPoint": [
+          { "@type": "ContactPoint", "contactType": "customer support", "email": "support@dryves.app", "url": "https://dryves.app/support.html", "availableLanguage": ["English", "Spanish"] },
+          { "@type": "ContactPoint", "contactType": "partnerships", "email": "partners@dryves.app" }
+        ]
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://dryves.app/#webpage",
+        "url": "https://dryves.app/",
+        "name": "Dryves: Smart Driving Logger for Student Drivers",
+        "isPartOf": { "@id": "https://dryves.app/#website" },
+        "about": { "@id": "https://dryves.app/#app" },
+        "primaryImageOfPage": "https://dryves.app/assets/screenshots/dashboard.webp",
+        "inLanguage": "en-US"
+      },
+      {
+        "@type": "MobileApplication",
+        "@id": "https://dryves.app/#app",
+        "name": "Dryves - Smart Driving Logger",
+        "alternateName": "Dryves",
+        "description": "A driving log app for student drivers. Log supervised practice hours for a learner's permit or driver's license with Siri, CarPlay, Live Activities, and widgets, with weather and day or night hours recorded automatically.",
+        "operatingSystem": "iOS 17.0 or later",
+        "applicationCategory": "EducationalApplication",
+        "applicationSubCategory": "Driving log",
+        "url": "https://dryves.app/",
+        "downloadUrl": "https://apps.apple.com/us/app/dryves-smart-driving-logger/id6759067319",
+        "installUrl": "https://apps.apple.com/us/app/dryves-smart-driving-logger/id6759067319",
+        "image": "https://dryves.app/assets/icon-512.png",
+        "screenshot": [
+          "https://dryves.app/assets/screenshots/dashboard.webp",
+          "https://dryves.app/assets/screenshots/new-drive.webp",
+          "https://dryves.app/assets/screenshots/drive-log.webp",
+          "https://dryves.app/assets/screenshots/live-activities.webp"
+        ],
+        "inLanguage": ["en", "es"],
+        "isAccessibleForFree": true,
+        "publisher": { "@id": "https://dryves.app/#organization" },
+        "featureList": [
+          "Start and stop drives hands-free with Siri",
+          "Drive timer in Live Activities and the Dynamic Island",
+          "CarPlay app",
+          "Home Screen and Lock Screen widgets",
+          "Location reminders to start and stop drives",
+          "Automatic weather and day or night tracking",
+          "Night driving hours counted separately",
+          "Adjustable hour goals with a progress dashboard",
+          "Import driving hours from RoadReady, CSV, or PDF",
+          "No account required; data stays on your iPhone"
+        ],
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "FAQPage",
+        "@id": "https://dryves.app/#faq",
+        "url": "https://dryves.app/#faq",
+        "isPartOf": {
+          "@id": "https://dryves.app/#website"
+        },
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is Dryves?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Dryves is a free driving logger for iPhone. Student drivers use it to keep a log of the supervised practice hours they need for a learner's permit or driver's license, with the date, length, weather, and day or night recorded for every drive."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is Dryves free?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Dryves is free on the App Store, and there's no account to create."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does Dryves track night driving hours?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Each drive is marked as day or night automatically, and night hours are counted separately on the dashboard for states that require them. You can set your own goals for total and night hours."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I log a drive I forgot to start?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. You can log a past drive afterwards, by voice with Siri if you like. Location reminders also nudge you to start a drive when you leave home, school, or another saved place, so fewer drives slip through."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I move my hours from another driving log app?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Dryves imports driving hours from RoadReady, and from CSV or PDF logs, so you can keep going where you left off."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Which phones does Dryves work on?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Dryves is an iPhone app. It runs on iOS 17 or later, in English and Spanish."
+            }
+          }
+        ]
+      }
+    ]
   }
   </script>
 </head>
@@ -56,8 +196,9 @@
     <section class="hero">
       <div class="wrap">
         <div>
+          <p class="eyebrow">The smart driving logger for student drivers</p>
           <h1>Never forget to <em>log a drive.</em></h1>
-          <p class="lede">Dryves is the driving-hours log for student drivers. Start a drive with Siri, CarPlay, or a widget. Weather, day or night, and the reminders to start and stop are handled for you.</p>
+          <p class="lede">Dryves is the driving log app that tracks your learner's permit practice hours for you. Start a drive with Siri, CarPlay, or a widget. Weather, day or night, and the reminders to start and stop are handled for you.</p>
           <div class="cta">
             <a class="badge-link" href="https://apps.apple.com/us/app/dryves-smart-driving-logger/id6759067319">
               <img src="assets/app-store-badge.svg" alt="Download on the App Store" width="162" height="54">
@@ -91,7 +232,7 @@
       <div class="wrap">
         <div class="section-head">
           <h2>Logging hours shouldn't be the hard part of learning to drive.</h2>
-          <p>Dryves is built on the parts of iOS you already use, so starting a drive takes one tap or one sentence, and the details fill themselves in.</p>
+          <p>Most driving logs are a paper sheet or a form you fill in after the fact. Dryves is built on the parts of iOS you already use, so starting a drive takes one tap or one sentence, and the details fill themselves in.</p>
         </div>
 
         <div class="strip" role="region" aria-label="App screenshots" tabindex="0">
@@ -151,6 +292,7 @@
       <div class="wrap">
         <div class="section-head">
           <h2>One record of a new driver, useful to everyone who depends on it.</h2>
+          <p>A driving hours log for teens practicing on a permit, the parents supervising them, and the driving schools teaching them.</p>
         </div>
 
         <div class="audiences">
@@ -226,6 +368,34 @@
       <div class="lane" aria-hidden="true"></div>
     </section>
 
+    <section class="faq-section" id="faq">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Questions about logging driving hours</h2>
+        </div>
+        <dl class="faq">
+          <dt>What is Dryves?</dt>
+          <dd>Dryves is a free driving logger for iPhone. Student drivers use it to keep a log of the supervised practice hours they need for a learner's permit or driver's license, with the date, length, weather, and day or night recorded for every drive.</dd>
+
+          <dt>Is Dryves free?</dt>
+          <dd>Yes. Dryves is free on the App Store, and there's no account to create.</dd>
+
+          <dt>Does Dryves track night driving hours?</dt>
+          <dd>Yes. Each drive is marked as day or night automatically, and night hours are counted separately on the dashboard for states that require them. You can set your own goals for total and night hours.</dd>
+
+          <dt>Can I log a drive I forgot to start?</dt>
+          <dd>Yes. You can log a past drive afterwards, by voice with Siri if you like. Location reminders also nudge you to start a drive when you leave home, school, or another saved place, so fewer drives slip through.</dd>
+
+          <dt>Can I move my hours from another driving log app?</dt>
+          <dd>Yes. Dryves imports driving hours from RoadReady, and from CSV or PDF logs, so you can keep going where you left off.</dd>
+
+          <dt>Which phones does Dryves work on?</dt>
+          <dd>Dryves is an iPhone app. It runs on iOS 17 or later, in English and Spanish.</dd>
+        </dl>
+        <p class="faq-more">More answers on the <a href="/support.html">support page</a>.</p>
+      </div>
+    </section>
+
     <section class="closing">
       <div class="wrap">
         <h2>Start with the hours.</h2>
@@ -247,6 +417,7 @@
       <nav aria-label="Footer">
         <a href="/privacy.html">Privacy Policy</a>
         <a href="/terms.html">Terms of Service</a>
+        <a href="#faq">FAQ</a>
         <a href="/support.html">Support</a>
         <a href="mailto:hello@dryves.app">Contact</a>
       </nav>

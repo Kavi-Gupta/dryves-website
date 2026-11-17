@@ -180,6 +180,7 @@ p { margin: 0; text-wrap: pretty; }
   min-width: 3.2ch; text-align: right;
 }
 
+.eyebrow { margin-bottom: 18px; font-size: 0.9375rem; font-weight: 600; letter-spacing: -0.005em; color: var(--link); }
 .hero h1 em { font-style: normal; color: var(--link); }
 .hero .lede { margin-top: 24px; font-size: clamp(1.125rem, 1.6vw, 1.3rem); color: var(--ink-2); max-width: 34em; }
 .hero .cta { margin-top: 32px; display: flex; flex-wrap: wrap; align-items: center; gap: 14px 22px; }
@@ -322,6 +323,10 @@ section { padding-block: clamp(64px, 9vw, 120px); }
   padding: clamp(22px, 3vw, 32px);
 }
 .contact-card a { font-weight: 600; letter-spacing: -0.02em; font-size: clamp(1.15rem, 3.4vw, 1.5rem); overflow-wrap: anywhere; }
+.faq-section + .closing { border-top: 1px solid var(--rule); }
+.faq-section .faq { max-width: 46rem; margin: 0; }
+.faq-section .faq dt:first-child { margin-top: 0; }
+.faq-more { margin-top: 32px; color: var(--ink-2); }
 .faq dt { font-weight: 600; font-size: 1.0625rem; letter-spacing: -0.01em; margin-top: 26px; }
 .faq dd { margin: 6px 0 0; color: var(--ink-2); }
 
